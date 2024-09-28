@@ -1,6 +1,3 @@
-import mlflow
-import mlflow.sklearn
-
 import logging
 from typing import Dict, Tuple
 
@@ -8,7 +5,6 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 from sklearn.model_selection import train_test_split
-
 
 # Set the MLflow tracking URI to your server
 # mlflow.set_tracking_uri("http://127.0.0.1:5000")
@@ -53,7 +49,7 @@ def train_model(X_train: pd.DataFrame, y_train: pd.Series) -> LinearRegression:
     #         artifact_path="model",
     #         input_example=X_train.iloc[0:10],
     #     )
-    
+
     return regressor
 
 
